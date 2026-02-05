@@ -1,4 +1,6 @@
-// import { Link } from 'react-router'
+import { Link } from 'react-router'
+
+import {Icons} from "../common/Icons"
 import { useState } from "react";
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -8,7 +10,7 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
 
           {/* Logo */}
-          <div className="flex-shrink-0">
+          <div className="flex-[shrink-0]">
             <a href="/" className="text-2xl font-bold text-white">
               ProgHive
             </a>
@@ -16,28 +18,29 @@ const Header = () => {
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#" className="text-white hover:text-rose-600 transition">
+            <Link to="/" className="text-white hover:text-rose-600 transition">
               Home
-            </a>
-            <a href="#" className="text-white hover:text-rose-600 transition">
+            </Link>
+            <Link to="/services" className="text-white hover:text-rose-600 transition">
               Services
-            </a>
-            <a href="#" className="text-white hover:text-rose-600 transition">
+            </Link>
+            <Link to="/portfolio" className="text-white hover:text-rose-600 transition">
               Portfolio
-            </a>
-            <a href="#" className="text-white hover:text-rose-600 transition">
+            </Link>
+            <Link to="/blog" className="text-white hover:text-rose-600 transition">
+              Blog
+            </Link>
+            <Link to="contact" className="text-white hover:text-rose-600 transition">
               Contact
-            </a>
+            </Link>
           </nav>
 
           {/* CTA Button (Desktop) */}
           <div className="hidden md:block">
-            <a
-              href="#"
-              className="bg-rose-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-rose-700 transition"
-            >
-              Get Started
-            </a>
+            <button className="ml-2 flex text-white items-center gap-2 rounded border px-3 py-1.5 cursor-pointer hover:border-rose-600 hover:bg-rose-600">
+              <Icons.User className="text-white"/>
+              <span>Sign in/Sign up</span>
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
