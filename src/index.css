@@ -1,2 +1,57 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary: 5 47 74; /* blue-500 */
+    --bg-primary: 5 47 74; /* blue-500 */
+    --color-secondary: 16 185 129; /* emerald-500 */
+    --color-accent: 234 179 8; /* yellow-500 */
+  }
+}
+
+/* Custom container */
+@layer components {
+  .container {
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+    width: 100%;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      max-width: 640px;
+      padding-inline: 0.5rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      max-width: 768px;
+      padding-inline: 0.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      max-width: 1024px;
+      padding-inline: 1rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .container {
+      max-width: 1280px;
+      padding-inline: 2.5rem;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .container {
+      max-width: 1440px;
+      padding-inline: 3.5rem;
+    }
+  }
+}

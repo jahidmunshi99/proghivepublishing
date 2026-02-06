@@ -1,19 +1,23 @@
-import { Link } from 'react-router'
-
-import {Icons} from "../common/Icons"
 import { useState } from "react";
+import { Link } from "react-router";
+import { useAuth } from "../../hooks/useAuth";
+import { Icons } from "../common/Icons";
+import ProfileMenu from "./ProfileMenu";
 const Header = () => {
-    const [isOpen, setIsOpen] = useState(false);
-  return (
- <header className="fixed top-0 left-0 w-full z-50  bg-sky-950 shadow-md">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+  const { authState } = useAuth();
+  const [isOpen, setIsOpen] = useState(false);
 
+  console.log(authState);
+
+  return (
+    <header className="fixed top-0 left-0 w-full z-50  bg-sky-950 shadow-md">
+      <div className="container">
+        <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-[shrink-0]">
-            <a href="/" className="text-2xl font-bold text-white">
-              ProgHive
-            </a>
+            <Link to="/" className="text-2xl font-bold text-white">
+              <img className="w-35" src={Icons.Logo} alt="" />
+            </Link>
           </div>
 
           {/* Desktop Menu */}
@@ -21,41 +25,79 @@ const Header = () => {
             <Link to="/" className="text-white hover:text-rose-600 transition">
               Home
             </Link>
-            <Link to="/services" className="text-white hover:text-rose-600 transition">
+            <Link
+              to="/services"
+              className="text-white hover:text-rose-600 transition"
+            >
               Services
             </Link>
-            <Link to="/portfolio" className="text-white hover:text-rose-600 transition">
+            <Link
+              to="/portfolio"
+              className="text-white hover:text-rose-600 transition"
+            >
               Portfolio
             </Link>
-            <Link to="/blog" className="text-white hover:text-rose-600 transition">
+            <Link
+              to="/blog"
+              className="text-white hover:text-rose-600 transition"
+            >
               Blog
             </Link>
-            <Link to="contact" className="text-white hover:text-rose-600 transition">
+            <Link
+              to="contact"
+              className="text-white hover:text-rose-600 transition"
+            >
               Contact
             </Link>
           </nav>
 
           {/* CTA Button (Desktop) */}
-          <div className="hidden md:block">
-            <button className="ml-2 flex text-white items-center gap-2 rounded border px-3 py-1.5 cursor-pointer hover:border-rose-600 hover:bg-rose-600">
-              <Icons.User className="text-white"/>
-              <span>Sign in/Sign up</span>
-            </button>
-          </div>
-
+          {!authState?.isAuthenticated ? (
+            <div className="hidden md:block">
+              <Link
+                to="/login"
+                className="ml-2 flex text-white items-center gap-2 rounded border px-3 py-1.5 cursor-pointer hover:border-rose-600 hover:bg-rose-600 shadow-md shadow-cyan-500/20"
+              >
+                <Icons.User className="text-white" />
+                <span>Sign in/Sign up</span>
+              </Link>
+            </div>
+          ) : (
+            <ProfileMenu />
+          )}
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-gray-800 focus:outline-none"
+            className="md:hidden text-white focus:outline-none"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
             {isOpen ? (
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             ) : (
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               </svg>
             )}
           </button>
@@ -66,31 +108,36 @@ const Header = () => {
       {isOpen && (
         <div className="md:hidden bg-white shadow-lg">
           <nav className="flex flex-col space-y-4 px-6 py-6">
-            <a href="#" className="text-gray-700 hover:text-rose-600 transition">
+            <a
+              href="#"
+              className="text-gray-700 hover:text-rose-600 transition"
+            >
               Home
-            </a>
-            <a href="#" className="text-gray-700 hover:text-rose-600 transition">
-              Services
-            </a>
-            <a href="#" className="text-gray-700 hover:text-rose-600 transition">
-              Portfolio
-            </a>
-            <a href="#" className="text-gray-700 hover:text-rose-600 transition">
-              Contact
             </a>
 
             <a
               href="#"
-              className="mt-4 bg-rose-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-rose-700 transition"
+              className="text-gray-700 hover:text-rose-600 transition"
             >
-              Get Started
+              Services
+            </a>
+            <a
+              href="#"
+              className="text-gray-700 hover:text-rose-600 transition"
+            >
+              Portfolio
+            </a>
+            <a
+              href="#"
+              className="text-gray-700  hover:text-rose-600 transition"
+            >
+              Contact
             </a>
           </nav>
         </div>
       )}
     </header>
+  );
+};
 
-  )
-}
-
-export default Header
+export default Header;

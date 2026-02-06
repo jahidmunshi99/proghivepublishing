@@ -1,16 +1,18 @@
-import Footer from "./components/layout/Footer"
-import Header from "./components/layout/Header"
-import AppRoutes from "./routes/Approutes"
+import Footer from "./components/layout/Footer";
+import Header from "./components/layout/Header";
+import { AuthProvider } from "./contexts/AuthContext";
+import AppRoutes from "./routes/Approutes";
 
-
-const App = ()=> {
+const App = () => {
   return (
     <>
-    <Header/>
-    <AppRoutes/>
-    <Footer/>
+      <AuthProvider>
+        <Header />
+        <AppRoutes />
+        <Footer />
+      </AuthProvider>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
