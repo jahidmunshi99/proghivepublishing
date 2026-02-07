@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router";
 import { Icons } from "../common/Icons";
 
 export default function AccountMenu() {
@@ -36,18 +37,20 @@ export default function AccountMenu() {
           <div className="absolute top-0 right-4 w-3 h-3 bg-white transform rotate-45 -translate-y-1/2 shadow-md"></div>
 
           <div className="py-1">
-            <button
+            <Link
+              to="/dashboard/profile"
               onClick={() => setOpen(false)}
               className="flex gap-2 items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-red-600 cursor-pointer"
             >
               <Icons.User size="18" /> Profile
-            </button>
-            <button
+            </Link>
+            <Link
+              to="/dashboard"
               onClick={() => setOpen(false)}
               className="flex gap-2 items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-red-600 cursor-pointer"
             >
-              <Icons.Dashboard size="18" /> My Dashboard
-            </button>
+              <Icons.Dashboard size="18" /> My Dashboard{" "}
+            </Link>
             <div className="border-t border-gray-200 my-1"></div>
 
             <button

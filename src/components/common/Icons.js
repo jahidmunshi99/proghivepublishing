@@ -1,9 +1,12 @@
 import { FaEye, FaRegUser, FaTwitter, FaYoutube } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa6";
+import { FiEdit } from "react-icons/fi";
 import { IoMdEyeOff } from "react-icons/io";
 import { IoSettingsOutline } from "react-icons/io5";
+import { MdDeleteOutline } from "react-icons/md";
 import { RiLogoutCircleRLine } from "react-icons/ri";
 import { RxDashboard } from "react-icons/rx";
+
 import Logo from "../../assets/ph-logo-en.png";
 
 export const Icons = {
@@ -17,4 +20,6 @@ export const Icons = {
   EyeOff: IoMdEyeOff,
   Setting: IoSettingsOutline,
   Dashboard: RxDashboard,
+  Edit: FiEdit,
+  Delete: MdDeleteOutline,
 };

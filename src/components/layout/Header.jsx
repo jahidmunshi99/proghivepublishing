@@ -44,7 +44,7 @@ const Header = () => {
               Blog
             </Link>
             <Link
-              to="contact"
+              to="/#contact"
               className="text-white hover:text-rose-600 transition"
             >
               Contact

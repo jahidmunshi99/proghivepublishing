@@ -1,5 +1,8 @@
+import About from "../About";
+import MediaCoverage from "../MediaCoverage";
 import HeroSection from "./HeroSection";
 import Portfolio from "./Portfolio";
+import ServicesSection from "./ServicesSection";
 import WhyChooseUs from "./WhyChooseUs";
 
 const Home = () => {
@@ -7,131 +10,14 @@ const Home = () => {
     <>
       {/* HERO SECTION */}
       <HeroSection />
-
       {/* <!-- ABOUT SECTION --> */}
-      <section className="py-20 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-brand-red font-semibold tracking-widest mb-2">
-                ABOUT US
-              </p>
-              <h2 className="text-2xl lg:text-3xl font-bold mb-6">
-                Professionalism, Creativity, and Artistry—We Create
-                Masterpieces!
-              </h2>
-              <p className="mb-4 text-gray-600">
-                At Book Pro Publishing, we believe every story has the power to
-                inspire, captivate, and leave a lasting impact. Our team of
-                professional writers, editors, and designers refine and promote
-                your book to the highest standards.
-              </p>
-              <p className="mb-6 text-gray-600">
-                Whether you're a first-time writer or an established author, we
-                offer fully customized publishing services. Let’s create
-                something extraordinary together!
-              </p>
-              <a
-                href="#"
-                className="bg-rose-600 inline-flex items-center text-white py-3 px-8 rounded-lg font-semibold text-lg hover:bg-rose-700 transition"
-              >
-                → Request a Free Consultation
-              </a>
-            </div>
-
-            <div className="lg:pl-8">
-              <img
-                src="https://bookpropublishing.com/wp-content/uploads/2025/02/aboutImg_new.webp"
-                alt="Children's Book Spread"
-                className="w-full h-auto rounded-xl shadow-2xl"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <About />
       {/* <!-- Why Choose Us Section --> */}
       <WhyChooseUs />
-
       {/* <!-- Media Coverage Section --> */}
-      <section className="py-16 bg-gray-100 text-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-rose-600 font-semibold tracking-widest uppercase mb-2">
-            We Work With
-          </p>
-          <h3 className="text-3xl md:text-4xl font-bold mb-10 text-gray-800">
-            Our Published Books Have Been Covered By
-          </h3>
-          <div className="flex flex-wrap justify-center items-center gap-8 opacity-80">
-            <img
-              src="image_3471c5.png"
-              alt="Partner Logos"
-              className="max-h-20 w-auto object-contain"
-            />
-          </div>
-        </div>
-      </section>
-
+      <MediaCoverage />
       {/* <!-- Services Section --> */}
-      <section className="py-20 bg-[gradient-to-b] from-sky-950 to-sky-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-rose-500 font-semibold tracking-widest uppercase mb-3">
-            Our Complete Book Publisher’s Services
-          </p>
-          <h2 className="text-4xl font-bold mb-16">
-            We Take Every Project to Success with Our Professional & Affordable
-            Services
-          </h2>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* <!-- Reusable Service Card --> */}
-            <div className="group bg-white text-gray-800 rounded-2xl p-6 border border-gray-200 shadow-md hover:shadow-xl hover:bg-sky-800 hover:text-white transition-all duration-300">
-              <svg
-                className="w-10 h-10 text-rose-600 group-hover:text-white transition-colors mb-4"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                viewBox="0 0 24 24"
-              >
-                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                <path d="M4 4.5A2.5 2.5 0 0 1 6.5 7H20v10H6.5A2.5 2.5 0 0 0 4 19.5z"></path>
-              </svg>
-              <h3 className="font-semibold text-lg mb-2">
-                Children’s Book Service
-              </h3>
-              <p className="text-sm opacity-80 group-hover:opacity-100">
-                Get appealing covers that grab every eye at first glance.
-              </p>
-            </div>
-
-            {/* <!-- Copy & change for other services --> */}
-            <div className="group bg-white text-gray-800 rounded-2xl p-6 border border-gray-200 shadow-md hover:shadow-xl hover:bg-sky-800 hover:text-white transition-all duration-300">
-              <svg
-                className="w-10 h-10 text-rose-600 group-hover:text-white transition-colors mb-4"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                viewBox="0 0 24 24"
-              >
-                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                <path d="M4 4.5A2.5 2.5 0 0 1 6.5 7H20v10H6.5A2.5 2.5 0 0 0 4 19.5z"></path>
-              </svg>
-              <h3 className="font-semibold text-lg mb-2">
-                Ghost Writing Services
-              </h3>
-              <p className="text-sm opacity-80 group-hover:opacity-100">
-                Turn your idea into a compelling and professional story.
-              </p>
-            </div>
-
-            {/* <!-- Add more cards here --> */}
-          </div>
-        </div>
-      </section>
+      <ServicesSection />
 
       {/* <!-- Our Process Section --> */}
       <section className="bg-white py-20 px-6 sm:px-8 lg:px-24">
@@ -367,7 +253,7 @@ const Home = () => {
         </div>
       </section>
       {/* <!-- Contact Section --> */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50" id="contact">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* <!-- Left Content --> */}
           <div>
