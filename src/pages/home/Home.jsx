@@ -14,42 +14,15 @@ const Home = () => {
     <>
       {/* HERO SECTION */}
       <HeroSection />
-      {/* <!-- ABOUT SECTION --> */}
-      <About />
-      {/* <!-- Why Choose Us Section --> */}
-      <WhyChooseUs />
       {/* <!-- Media Coverage Section --> */}
       <MediaCoverage />
       {/* <!-- Services Section --> */}
       <ServicesSection />
 
-      {/* <!-- Our Process Section --> */}
-      <section className="bg-white py-20 px-6 sm:px-8 lg:px-24">
-        <div className="max-w-5xl mx-auto text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Process</h2>
-          <p className="text-lg text-gray-600">
-            Learn About Our Professional Book Publishing Steps
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* <!-- Single Step --> */}
-          <div className="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
-            <div className="w-12 h-12 bg-indigo-500 text-white rounded-full flex items-center justify-center font-bold mb-4">
-              01
-            </div>
-            <h3 className="text-xl font-semibold mb-2 text-gray-800">
-              Manuscript Finalization
-            </h3>
-            <p className="text-gray-600">
-              We refine or create your manuscript for maximum impact.
-            </p>
-          </div>
-
-          {/* <!-- Duplicate and update steps --> */}
-        </div>
-      </section>
-
+      {/* <!-- Why Choose Us Section --> */}
+      <WhyChooseUs />
+      {/* <!-- ABOUT SECTION --> */}
+      <About />
       {/* <!-- Ebook Marketing Section --> */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

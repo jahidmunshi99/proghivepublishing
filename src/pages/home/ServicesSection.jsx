@@ -1,64 +1,162 @@
+import { Icons } from "../../components/common/Icons.js";
 const ServicesSection = () => {
   return (
-    <section className="py-20 bg-[gradient-to-b] from-sky-950 to-sky-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <p className="text-rose-500 font-semibold tracking-widest uppercase mb-3">
-          Our Complete Book Publisher’s Services
-        </p>
-        <h2 className="text-4xl font-bold mb-16">
-          We Take Every Project to Success with Our Professional & Affordable
-          Services
-        </h2>
+    <>
+      <section className="py-20 bg-[gradient-to-b] from-sky-950 to-sky-900 text-white container">
+        <div className="mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-rose-500 text-4xl font-semibold tracking-widest uppercase mb-3">
+            Save Your Time & Energy
+          </h2>
+          <h3 className="text-sky-950 text-[1.2rem] font-bold pt-5 pb-10">
+            Simplify your hiring journey without getting exhausted by partnering
+            with a skilled <br></br> Self-publishing, Design, and Marketing
+            specialist.
+          </h3>
+          {/** Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-20">
+            {/* Service Card */}
+            <div className="group relative w-full h-52 rounded-xl border border-gray-200 overflow-hidden cursor-pointer">
+              {/* Default View */}
+              <div
+                className="absolute inset-0 flex flex-col items-center justify-center bg-white
+      transition-all duration-500 ease-in-out
+      group-hover:opacity-0 group-hover:scale-95"
+              >
+                <Icons.BookIcon size="50" className="text-sky-950 mb-2" />
+                <h3 className="text-xl font-semibold text-gray-900">
+                  Self Publishing
+                </h3>
+              </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {/* <!-- Reusable Service Card --> */}
-          <div className="group bg-white text-gray-800 rounded-2xl p-6 border border-gray-200 shadow-md hover:shadow-xl hover:bg-sky-800 hover:text-white transition-all duration-300">
-            <svg
-              className="w-10 h-10 text-rose-600 group-hover:text-white transition-colors mb-4"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              viewBox="0 0 24 24"
-            >
-              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-              <path d="M4 4.5A2.5 2.5 0 0 1 6.5 7H20v10H6.5A2.5 2.5 0 0 0 4 19.5z"></path>
-            </svg>
-            <h3 className="font-semibold text-lg mb-2">
-              Children’s Book Service
-            </h3>
-            <p className="text-sm opacity-80 group-hover:opacity-100">
-              Get appealing covers that grab every eye at first glance.
-            </p>
+              {/* Hover View */}
+              <div
+                className="absolute inset-0 bg-sky-950 flex flex-col items-center justify-center px-6 text-white
+      opacity-0 translate-y-6
+      transition-all duration-500 ease-out
+      group-hover:opacity-100 group-hover:translate-y-0"
+              >
+                <h3 className="text-xl font-semibold mb-2">Self Publishing</h3>
+                <p className="text-sm text-center leading-relaxed">
+                  Complete self-publishing solutions including formatting, cover
+                  design, and KDP upload support.
+                </p>
+              </div>
+            </div>
+            <div className="group relative w-full h-52 rounded-xl border border-gray-200 overflow-hidden cursor-pointer">
+              {/* Default View */}
+              <div
+                className="absolute inset-0 flex flex-col items-center justify-center bg-white
+      transition-all duration-500 ease-in-out
+      group-hover:opacity-0 group-hover:scale-95"
+              >
+                <Icons.CodeLaptop size="50" className="text-sky-950 mb-2" />
+                <h3 className="text-xl font-semibold text-gray-900">
+                  Developer
+                </h3>
+              </div>
+
+              {/* Hover View */}
+              <div
+                className="absolute inset-0 bg-sky-950 flex flex-col items-center justify-center px-6 text-white
+      opacity-0 translate-y-6
+      transition-all duration-500 ease-out
+      group-hover:opacity-100 group-hover:translate-y-0"
+              >
+                <h3 className="text-xl font-semibold mb-2">Self Publishing</h3>
+                <p className="text-sm text-center leading-relaxed">
+                  Complete self-publishing solutions including formatting, cover
+                  design, and KDP upload support.
+                </p>
+              </div>
+            </div>
+            <div className="group relative w-full h-52 rounded-xl border border-gray-200 overflow-hidden cursor-pointer">
+              {/* Default View */}
+              <div
+                className="absolute inset-0 flex flex-col items-center justify-center bg-white
+      transition-all duration-500 ease-in-out
+      group-hover:opacity-0 group-hover:scale-95"
+              >
+                <Icons.Marketer size="50" className="text-sky-950 mb-2" />
+                <h3 className="text-xl font-semibold text-gray-900">
+                  Marketer
+                </h3>
+              </div>
+
+              {/* Hover View */}
+              <div
+                className="absolute inset-0 bg-sky-950 flex flex-col items-center justify-center px-6 text-white
+      opacity-0 translate-y-6
+      transition-all duration-500 ease-out
+      group-hover:opacity-100 group-hover:translate-y-0"
+              >
+                <h3 className="text-xl font-semibold mb-2">Self Publishing</h3>
+                <p className="text-sm text-center leading-relaxed">
+                  Complete self-publishing solutions including formatting, cover
+                  design, and KDP upload support.
+                </p>
+              </div>
+            </div>
+            <div className="group relative w-full h-52 rounded-xl border border-gray-200 overflow-hidden cursor-pointer">
+              {/* Default View */}
+              <div
+                className="absolute inset-0 flex flex-col items-center justify-center bg-white
+      transition-all duration-500 ease-in-out
+      group-hover:opacity-0 group-hover:scale-95"
+              >
+                <Icons.Edit size="45" className="text-sky-950 mb-2" />
+                <h3 className="text-xl font-semibold text-gray-900">
+                  Designer
+                </h3>
+              </div>
+
+              {/* Hover View */}
+              <div
+                className="absolute inset-0 bg-sky-950 flex flex-col items-center justify-center px-6 text-white
+      opacity-0 translate-y-6
+      transition-all duration-500 ease-out
+      group-hover:opacity-100 group-hover:translate-y-0"
+              >
+                <h3 className="text-xl font-semibold mb-2">Self Publishing</h3>
+                <p className="text-sm text-center leading-relaxed">
+                  Complete self-publishing solutions including formatting, cover
+                  design, and KDP upload support.
+                </p>
+              </div>
+            </div>
+            <div className="group relative w-full h-52 rounded-xl border border-gray-200 overflow-hidden cursor-pointer">
+              {/* Default View */}
+              <div
+                className="absolute inset-0 flex flex-col items-center justify-center bg-white
+      transition-all duration-500 ease-in-out
+      group-hover:opacity-0 group-hover:scale-95"
+              >
+                <Icons.CustomerSupport
+                  size="45"
+                  className="text-sky-950 mb-2"
+                />
+                <h3 className="text-xl font-semibold text-gray-900">
+                  Admin Support
+                </h3>
+              </div>
+
+              {/* Hover View */}
+              <div
+                className="absolute inset-0 bg-sky-950 flex flex-col items-center justify-center px-6 text-white
+      opacity-0 translate-y-6
+      transition-all duration-500 ease-out
+      group-hover:opacity-100 group-hover:translate-y-0"
+              >
+                <h3 className="text-xl font-semibold mb-2">Self Publishing</h3>
+                <p className="text-sm text-center leading-relaxed">
+                  Complete self-publishing solutions including formatting, cover
+                  design, and KDP upload support.
+                </p>
+              </div>
+            </div>
           </div>
-
-          {/* <!-- Copy & change for other services --> */}
-          <div className="group bg-white text-gray-800 rounded-2xl p-6 border border-gray-200 shadow-md hover:shadow-xl hover:bg-sky-800 hover:text-white transition-all duration-300">
-            <svg
-              className="w-10 h-10 text-rose-600 group-hover:text-white transition-colors mb-4"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              viewBox="0 0 24 24"
-            >
-              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-              <path d="M4 4.5A2.5 2.5 0 0 1 6.5 7H20v10H6.5A2.5 2.5 0 0 0 4 19.5z"></path>
-            </svg>
-            <h3 className="font-semibold text-lg mb-2">
-              Ghost Writing Services
-            </h3>
-            <p className="text-sm opacity-80 group-hover:opacity-100">
-              Turn your idea into a compelling and professional story.
-            </p>
-          </div>
-
-          {/* <!-- Add more cards here --> */}
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
