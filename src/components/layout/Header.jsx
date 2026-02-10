@@ -15,37 +15,41 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-[shrink-0]">
-            <Link to="/" className="text-2xl font-bold text-white">
+            <Link to="/" className="text-2xl  text-white">
               <img className="w-35" src={Icons.Logo} alt="" />
             </Link>
           </div>
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex space-x-8">
-            <Link to="/" className="text-white hover:text-rose-600 transition">
+            <Link
+              to="/"
+              className="text-white hover:text-rose-600 transition font-semibold"
+            >
               Home
             </Link>
             <Link
-              to="/services"
-              className="text-white hover:text-rose-600 transition"
+              to="/service"
+              className="text-white cursor-pointer hover:text-rose-600 font-semibold"
             >
               Services
             </Link>
+
             <Link
               to="/portfolio"
-              className="text-white hover:text-rose-600 transition"
+              className="text-white hover:text-rose-600 transition font-semibold"
             >
               Portfolio
             </Link>
             <Link
               to="/#testimonial"
-              className="text-white hover:text-rose-600 transition"
+              className="text-white hover:text-rose-600 transition font-semibold"
             >
               Blog
             </Link>
             <Link
               to="/#contact"
-              className="text-white hover:text-rose-600 transition"
+              className="text-white hover:text-rose-600 transition font-semibold"
             >
               Contact
             </Link>

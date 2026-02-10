@@ -8,6 +8,8 @@ import Error from "../pages/Error";
 import Home from "../pages/home/Home";
 import Portfolio from "../pages/home/Portfolio";
 import Login from "../pages/Login";
+import CoverDesign from "../pages/services/CoverDesign";
+import { SelfPublishingService } from "../pages/services/SelfPublishingService";
 import Services from "../pages/services/Services";
 import Testimonial from "../pages/Testimonial";
 import PrivateRoute from "./PrivateRoute";
@@ -20,6 +22,11 @@ const AppRoutes = () => {
       <Route path="/blog" element={<Blog />}></Route>
       <Route path="/services" element={<Services />}></Route>
       <Route path="/testimonial" element={<Testimonial />}></Route>
+      <Route
+        path="/service/self-publishing"
+        element={<SelfPublishingService />}
+      ></Route>
+      <Route path="/service/designer" element={<CoverDesign />}></Route>
       <Route path="/portfolio" element={<Portfolio />}></Route>
       <Route path="/login" element={<Login />}></Route>
       {/* Protected Routes */}

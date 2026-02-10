@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { Icons } from "../../components/common/Icons.js";
 const ServicesSection = () => {
   return (
@@ -15,33 +16,37 @@ const ServicesSection = () => {
           {/** Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-20">
             {/* Service Card */}
-            <div className="group relative w-full h-52 rounded-xl border border-gray-200 overflow-hidden cursor-pointer">
-              {/* Default View */}
-              <div
-                className="absolute inset-0 flex flex-col items-center justify-center bg-white
+            <Link to="/service/self-publishing">
+              <div className="group relative w-full h-52 rounded-xl border border-gray-200 overflow-hidden cursor-pointer">
+                {/* Default View */}
+                <div
+                  className="absolute inset-0 flex flex-col items-center justify-center bg-white
       transition-all duration-500 ease-in-out
       group-hover:opacity-0 group-hover:scale-95"
-              >
-                <Icons.BookIcon size="50" className="text-sky-950 mb-2" />
-                <h3 className="text-xl font-semibold text-gray-900">
-                  Self Publishing
-                </h3>
-              </div>
+                >
+                  <Icons.BookIcon size="50" className="text-sky-950 mb-2" />
+                  <h3 className="text-xl font-semibold text-gray-900">
+                    Self Publishing
+                  </h3>
+                </div>
 
-              {/* Hover View */}
-              <div
-                className="absolute inset-0 bg-sky-950 flex flex-col items-center justify-center px-6 text-white
+                {/* Hover View */}
+                <div
+                  className="absolute inset-0 bg-sky-950 flex flex-col items-center justify-center px-6 text-white
       opacity-0 translate-y-6
       transition-all duration-500 ease-out
       group-hover:opacity-100 group-hover:translate-y-0"
-              >
-                <h3 className="text-xl font-semibold mb-2">Self Publishing</h3>
-                <p className="text-sm text-center leading-relaxed">
-                  Complete self-publishing solutions including formatting, cover
-                  design, and KDP upload support.
-                </p>
+                >
+                  <h3 className="text-xl font-semibold mb-2">
+                    Self Publishing
+                  </h3>
+                  <p className="text-sm text-center leading-relaxed">
+                    Complete self-publishing solutions including formatting,
+                    cover design, and KDP upload support.
+                  </p>
+                </div>
               </div>
-            </div>
+            </Link>
             <div className="group relative w-full h-52 rounded-xl border border-gray-200 overflow-hidden cursor-pointer">
               {/* Default View */}
               <div
@@ -96,33 +101,37 @@ const ServicesSection = () => {
                 </p>
               </div>
             </div>
-            <div className="group relative w-full h-52 rounded-xl border border-gray-200 overflow-hidden cursor-pointer">
-              {/* Default View */}
-              <div
-                className="absolute inset-0 flex flex-col items-center justify-center bg-white
+            <Link to="/service/designer">
+              <div className="group relative w-full h-52 rounded-xl border border-gray-200 overflow-hidden cursor-pointer">
+                {/* Default View */}
+                <div
+                  className="absolute inset-0 flex flex-col items-center justify-center bg-white
       transition-all duration-500 ease-in-out
       group-hover:opacity-0 group-hover:scale-95"
-              >
-                <Icons.Edit size="45" className="text-sky-950 mb-2" />
-                <h3 className="text-xl font-semibold text-gray-900">
-                  Designer
-                </h3>
-              </div>
+                >
+                  <Icons.Edit size="45" className="text-sky-950 mb-2" />
+                  <h3 className="text-xl font-semibold text-gray-900">
+                    Designer
+                  </h3>
+                </div>
 
-              {/* Hover View */}
-              <div
-                className="absolute inset-0 bg-sky-950 flex flex-col items-center justify-center px-6 text-white
+                {/* Hover View */}
+                <div
+                  className="absolute inset-0 bg-sky-950 flex flex-col items-center justify-center px-6 text-white
       opacity-0 translate-y-6
       transition-all duration-500 ease-out
       group-hover:opacity-100 group-hover:translate-y-0"
-              >
-                <h3 className="text-xl font-semibold mb-2">Self Publishing</h3>
-                <p className="text-sm text-center leading-relaxed">
-                  Complete self-publishing solutions including formatting, cover
-                  design, and KDP upload support.
-                </p>
+                >
+                  <h3 className="text-xl font-semibold mb-2">
+                    Self Publishing
+                  </h3>
+                  <p className="text-sm text-center leading-relaxed">
+                    Complete self-publishing solutions including formatting,
+                    cover design, and KDP upload support.
+                  </p>
+                </div>
               </div>
-            </div>
+            </Link>
             <div className="group relative w-full h-52 rounded-xl border border-gray-200 overflow-hidden cursor-pointer">
               {/* Default View */}
               <div
