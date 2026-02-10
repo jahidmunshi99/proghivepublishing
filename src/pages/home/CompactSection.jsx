@@ -2,7 +2,10 @@ import CountUp from "react-countup";
 
 const CompactSection = () => {
   return (
-    <section className="py-12 bg-sky-950 container px-40">
+    <section className="py-12 bg-sky-950">
+      <div className="container px-40">
+
+
       <div className="mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
         <h2 className="text-3xl sm:text-4xl font-bold mb-10">
           Our Achievements
@@ -54,6 +57,7 @@ const CompactSection = () => {
             <p className="mt-2 font-semibold text-gray-300">Published Books</p>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

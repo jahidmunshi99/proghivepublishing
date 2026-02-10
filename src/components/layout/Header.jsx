@@ -38,7 +38,7 @@ const Header = () => {
               Portfolio
             </Link>
             <Link
-              to="/blog"
+              to="/#testimonial"
               className="text-white hover:text-rose-600 transition"
             >
               Blog

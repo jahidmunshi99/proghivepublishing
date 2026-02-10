@@ -24,7 +24,10 @@ const TestimonialSection = () => {
     ],
   };
   return (
-    <section className="py-20 lg:py-24 bg-sky-950 text-white container">
+    <section className="py-20 lg:py-15 bg-sky-950 text-white scroll-mt-20">
+      <div className="container">
+
+ 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <p className="text-rose-500 font-semibold tracking-widest uppercase mb-2">
           Testimonials
@@ -77,6 +80,7 @@ const TestimonialSection = () => {
           </div>
         </div>
       </Slider>
+         </div>
     </section>
   );
 };

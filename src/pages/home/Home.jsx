@@ -1,4 +1,5 @@
 import About from "../About";
+import { SelfPublishingService } from "../services/SelfPublishingService";
 import CompactSection from "./CompactSection";
 import ContactSection from "./ContactSection";
 import FaqSection from "./FaqSection";
@@ -92,6 +93,7 @@ const Home = () => {
       <CompactSection />
       {/* <!-- Contact Section --> */}
       <ContactSection />
+      <SelfPublishingService/>
     </>
   );
 };

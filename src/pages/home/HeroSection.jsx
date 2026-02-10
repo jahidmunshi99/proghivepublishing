@@ -6,7 +6,7 @@ const HeroSection = () => {
   return (
     <>
       <section
-        className="relative bg-cover bg-center bg-no-repeat pt-30 pb-10 container"
+        className="relative bg-cover bg-center bg-no-repeat pt-30 pb-10"
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f')",
@@ -14,7 +14,7 @@ const HeroSection = () => {
       >
         <div className="absolute inset-0 bg-sky-950/90"></div>
 
-        <div className="relative mx-auto ">
+        <div className="relative mx-auto container">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             {/* Left Text */}
             <div className="lg:w-1/2 text-white">
