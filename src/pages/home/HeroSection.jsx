@@ -17,6 +17,7 @@ const HeroSection = () => {
         <div className="relative mx-auto container">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             {/* Left Text */}
+            {/* <OnScrollLeftRight tostart={-100}> */}
             <div className="lg:w-1/2 text-white">
               <h1 className="text-3xl sm:text-4xl font-extrabold leading-tight mb-6">
                 Your Story Matters—
@@ -52,9 +53,10 @@ const HeroSection = () => {
                 </Link>
               </div>
             </div>
-
+            {/* </OnScrollLeftRight> */}
             {/* Right Form */}
             <div className="lg:w-1/2 w-full">
+              {/* <OnScrollLeftRight tostart={100}> */}
               <div className="bg-white p-8 md:p-10 rounded-xl shadow-lg shadow-blue-200/30">
                 <h2 className="text-sky-950 text-2xl font-bold mb-6 text-center">
                   We're here to help!
@@ -103,6 +105,7 @@ const HeroSection = () => {
                   </button>
                 </form>
               </div>
+              {/* </OnScrollLeftRight> */}
             </div>
           </div>
         </div>

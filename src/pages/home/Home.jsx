@@ -1,4 +1,5 @@
 // import About from "../About";
+import RevealOnScroll from "../../components/ui/RevealOnScroll";
 import CallToAction from "./CallToAction";
 import CompactSection from "./CompactSection";
 import ContactSection from "./ContactSection";
@@ -18,12 +19,16 @@ const Home = () => {
       {/* <!-- Media Coverage Section --> */}
       <MediaCoverage />
       {/* <!-- Services Section --> */}
-      <ServicesSection />
+      <RevealOnScroll>
+        <ServicesSection />
+      </RevealOnScroll>
 
       {/* <!-- Why Choose Us Section --> */}
       <WhyChooseUs />
       {/* <!-- Portfolio --> */}
-      <Portfolio />
+      <RevealOnScroll>
+        <Portfolio />
+      </RevealOnScroll>
       {/* <!-- ABOUT SECTION --> */}
       {/* <About /> */}
 
